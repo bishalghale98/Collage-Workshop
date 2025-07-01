@@ -14,38 +14,48 @@
 
 <body>
   <!-- Header -->
- <header class="bg-gray-100">
-  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between p-4">
-    <h1 class="text-2xl md:text-3xl font-bold">Business</h1>
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <!-- Logo -->
+    <div class="flex items-center gap-2">
+      <i class="fas fa-briefcase text-blue-500 text-3xl"></i>
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Business</h1>
+    </div>
 
-    <!-- Hamburger Checkbox -->
-    <div class="relative md:hidden">
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="md:hidden">
       <input type="checkbox" id="menu-toggle" class="hidden peer" />
-      <label for="menu-toggle" class="cursor-pointer text-3xl">
+      <label for="menu-toggle" class="cursor-pointer text-3xl text-gray-700">
         <i class="fas fa-bars"></i>
       </label>
 
-      <!-- Mobile Menu -->
+      <!-- Sidebar Menu -->
       <div
-        class="absolute right-0 top-10 bg-gray-100 w-40 p-4 rounded-md shadow-md hidden peer-checked:flex flex-col gap-4 text-center">
-        <a href="/index.html" class="hover:text-blue-500">Home</a>
-        <a href="/index.html" class="hover:text-blue-500">About</a>
-        <a href="/index.html" class="hover:text-blue-500">Service</a>
-        <a href="/index.html" class="hover:text-blue-500">Contact</a>
+        class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 flex flex-col p-6 gap-6 z-50">
+        <label for="menu-toggle" class="self-end text-3xl cursor-pointer">
+          <i class="fas fa-times"></i>
+        </label>
+
+        <a href="/index.html" class="text-lg font-medium hover:text-blue-500 hover:underline">Home</a>
+        <a href="#client" class="text-lg font-medium hover:text-blue-500 hover:underline">Clients</a>
+        <a href="#services" class="text-lg font-medium hover:text-blue-500 hover:underline">Services</a>
+        <a href="#review" class="text-lg font-medium hover:text-blue-500 hover:underline">Review</a>
       </div>
     </div>
 
     <!-- Desktop Menu -->
-    <nav class="hidden md:block mt-4 md:mt-0">
-      <ul class="flex flex-col md:flex-row gap-4 text-center">
-        <li><a href="/index.html" class="hover:text-blue-500">Home</a></li>
-        <li><a href="/index.html" class="hover:text-blue-500">About</a></li>
-        <li><a href="/index.html" class="hover:text-blue-500">Service</a></li>
-        <li><a href="/index.html" class="hover:text-blue-500">Contact</a></li>
+    <nav class="hidden md:block">
+      <ul class="flex gap-8 text-lg font-medium text-gray-700">
+        <li><a href="/index.html" class="hover:text-blue-500 hover:underline">Home</a></li>
+        <li><a href="#client" class="hover:text-blue-500 hover:underline">Clients</a></li>
+        <li><a href="#services" class="hover:text-blue-500 hover:underline">Services</a></li>
+        <li><a href="#review" class="hover:text-blue-500 hover:underline">Review</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+
 
 
   <!-- Main Content -->
@@ -65,7 +75,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="2ndsection" class="container mx-auto my-24 text-center px-4">
+    <section id="services" class="container mx-auto my-24 text-center px-4">
       <h1 class="text-3xl md:text-5xl font-bold mb-12">Services</h1>
       <div class="flex flex-col md:flex-row justify-around gap-8">
         <div class="p-4 rounded-md shadow hover:bg-gray-200 hover:shadow-2xl transition-all">
@@ -89,7 +99,7 @@
     </section>
 
     <!-- Clients Section -->
-    <section class="container mx-auto my-24 text-center px-4">
+    <section id="clients" class="container mx-auto my-24 text-center px-4">
       <h1 class="text-3xl md:text-5xl font-bold mb-12">Clients</h1>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 place-items-center">
         <img src="./Images/Clients/client1.png" alt="Mahendra Morang" title="MMAMC"
@@ -104,7 +114,7 @@
     </section>
 
     <!-- Review Section -->
-    <section class="container mx-auto my-24 text-center px-4">
+    <section id="review" class="container mx-auto my-24 text-center px-4">
       <h1 class="text-3xl md:text-5xl font-bold mb-12">Review</h1>
       <div
         class="max-w-xl mx-auto p-5 shadow hover:shadow-2xl hover:bg-gray-100 transition-all">
